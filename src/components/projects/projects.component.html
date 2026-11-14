@@ -1,5 +1,6 @@
 <div class="space-y-8">
  <h3 class="font-mono-vt text-2xl text-[--accent] mb-4"><app-typewriter [text]="title()"/></h3>
+ <p class="text-sm text-gray-600 dark:text-gray-400">{{intro()}}</p>
  <article class="border border-[--panel-border] rounded-md p-4 space-y-3">
   <div class="game-placeholder rounded" aria-hidden="true">SKROLL</div>
   <h4 class="font-bold text-lg text-[--accent]">SKROLL · Cyclops Games</h4>
@@ -12,6 +13,7 @@
    <li>{{languageService.language()==='es'?'Ganador del Social Impact Award y nominado a Best Visual Art en Guerrilla Game Festival 2026':'Social Impact Award winner and Best Visual Art nominee at Guerrilla Game Festival 2026'}}</li>
   </ul>
  </article>
+ <h4 class="font-mono-vt text-2xl text-[--accent]">{{gamesLabel()}}</h4>
  <div class="games-grid gap-6">
  @for(game of videogames();track game.title){
   <a [href]="game.projectUrl" target="_blank" rel="noopener noreferrer" class="block border border-[--panel-border] bg-[--bg-panel] p-4 group hover:border-[--accent] transition-colors text-left rounded-md">
@@ -21,8 +23,8 @@
  }
  </div>
  <section class="space-y-4 pt-2">
-  <h4 class="font-mono-vt text-2xl text-[--accent]">{{languageService.language()==='es'?'TRABAJO CREATIVO':'CREATIVE WORK'}}</h4>
-  <p class="text-sm text-gray-600 dark:text-gray-400">{{languageService.language()==='es'?'Una seleccion de ilustracion, arte de videojuego y modelado 3D propio.':'A selection of my own illustration, game art and 3D modelling work.'}}</p>
+  <h4 class="font-mono-vt text-2xl text-[--accent]">{{creativeLabel()}}</h4>
+  <p class="text-sm text-gray-600 dark:text-gray-400">{{creativeIntro()}}</p>
   <div class="games-grid gap-6">
    @for(work of creativeWork(); track work.imageUrl) {
     <figure class="border border-[--panel-border] bg-[--bg-panel] p-4 rounded-md">

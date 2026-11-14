@@ -27,7 +27,15 @@ interface CreativeWork {
 export class ProjectsComponent {
   languageService = inject(LanguageService);
 
-  title = computed(() => this.languageService.translations().videogames.title);
+  title = computed(() => this.languageService.language() === 'es' ? 'PROYECTOS VISUALES' : 'VISUAL PROJECTS');
+  intro = computed(() => this.languageService.language() === 'es'
+    ? 'Videojuegos, desarrollo web, arte 3D y experiencias que voy construyendo.'
+    : 'Games, web development, 3D art and experiences I am building.');
+  gamesLabel = computed(() => this.languageService.language() === 'es' ? 'JUEGOS Y EXPERIENCIAS INTERACTIVAS' : 'GAMES & INTERACTIVE EXPERIENCES');
+  creativeLabel = computed(() => this.languageService.language() === 'es' ? 'TRABAJO CREATIVO' : 'CREATIVE WORK');
+  creativeIntro = computed(() => this.languageService.language() === 'es'
+    ? 'Una selección de ilustración, arte de videojuego y modelado 3D propio.'
+    : 'A selection of my own illustration, game art and 3D modelling work.');
 
   videogames = computed(() => [
     {
