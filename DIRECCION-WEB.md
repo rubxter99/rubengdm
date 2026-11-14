@@ -27,12 +27,7 @@ Dropshipping sería una línea de negocio distinta, con validación de producto,
 
 ## Alojamiento
 
-Cloudflare Pages permite empezar con un subdominio pages.dev y un plan gratuito. Netlify es otra opción y ya figura en los CV como rubxter.netlify.app; su plan Free admite proyectos comerciales, con límites de uso. Un dominio propio puede añadirse después sin contratar un VPS.
-
-- https://developers.cloudflare.com/pages/get-started/direct-upload/
-- https://developers.cloudflare.com/pages/platform/limits/
-- https://www.netlify.com/blog/introducing-netlify-free-plan/
-- https://www.netlify.com/pricing/
+El portfolio está desplegado en Vercel y conectado al dominio `www.rubengdm.dev`. Cada cambio enviado a la rama `main` del repositorio activa un nuevo despliegue. La URL de Vercel queda como dirección técnica, mientras que el dominio propio es la dirección pública para compartir.
 
 Para un dominio .com estándar, Porkbun muestra 11,08 USD de registro y renovación en la consulta del 6 de septiembre de 2026. Confirmar disponibilidad, impuestos, moneda y precio final antes de comprar. No es una reserva ni un precio garantizado.
 

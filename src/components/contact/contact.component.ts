@@ -11,6 +11,11 @@ interface SocialLink {
   path: string;
   viewBox?: string;
 }
+
+interface ProjectLink {
+  name: string;
+  url: string;
+}
 @Component({
   selector: 'app-contact',
   standalone: true,
@@ -39,10 +44,17 @@ export class ContactComponent {
       viewBox: '0 0 24 24'
     },
     {
-      name: 'Website',
-      url: 'https://rubxter.netlify.app/',
-      path: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L8.93 15c.92.92 2.16 1.43 3.48 1.43.58 0 1.13-.1 1.66-.29.28.18.52.4.74.65A8.93 8.93 0 0111 19.93zM17.9 17.79c-.23-.26-.47-.5-.71-.75-.53.2-1.1.31-1.7.31-1.32 0-2.56-.5-3.48-1.43L4.21 8.21C4.8 7.31 5.55 6.55 6.45 5.96L15 14.52c.49.49 1.09.87 1.76 1.11L17.9 17.79z',
+      name: 'Instagram',
+      url: 'https://www.instagram.com/rubxtersito/',
+      path: 'M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.75 6a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 17.75 6z',
       viewBox: '0 0 24 24'
     }
+  ]);
+
+  projectLinks = signal<ProjectLink[]>([
+    { name: 'Cyclops Games', url: 'https://cyclops-games.com/' },
+    { name: 'SKROLL on Steam', url: 'https://store.steampowered.com/app/4224290/SKROLL/' },
+    { name: 'Cyclops Games Instagram', url: 'https://www.instagram.com/cyclops.games/' },
+    { name: 'Cyclops Games Discord', url: 'https://discord.gg/dNWkDsjeg' },
   ]);
 }

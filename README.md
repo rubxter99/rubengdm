@@ -30,11 +30,7 @@ Tailwind y las fuentes se compilan localmente. El navegador no necesita cargar e
 
 ## Publicar
 
-Cloudflare Pages: compilar y subir `dist/` mediante Direct Upload para obtener una dirección `nombre.pages.dev`. Para integración Git, configurar `npm run build` y salida `dist` desde la creación del proyecto.
-
-https://developers.cloudflare.com/pages/get-started/direct-upload/
-
-Netlify: subir `dist/` al sitio existente o conectar el repositorio. `netlify.toml` configura compilación y salida.
+Vercel: el repositorio está conectado a Vercel. Cada `git push` a `main` genera un nuevo despliegue de producción. El portfolio se publica en `www.rubengdm.dev`; Vercel detecta Angular y configura el build del proyecto.
 
 El contacto utiliza `mailto:`. No se ha publicado ni contratado ningún servicio. La versión ES/EN cambia en cliente; no son dos páginas independientes prerenderizadas para SEO.
 

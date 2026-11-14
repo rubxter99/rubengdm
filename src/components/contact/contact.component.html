@@ -10,7 +10,15 @@
   </div>
  </div>
  <div class="border-t border-[--panel-border] pt-6">
-  <h2 class="font-mono-vt text-3xl text-[--accent] mb-4">{{languageService.language()==='es'?'Servicios web':'Web services'}}</h2>
+  <h2 class="font-mono-vt text-3xl text-[--accent] mb-4">{{languageService.language()==='es'?'Proyectos actuales':'Current projects'}}</h2>
+  <div class="flex flex-wrap gap-x-5 gap-y-3 text-sm underline">
+   @for(project of projectLinks();track project.url){
+    <a [href]="project.url" target="_blank" rel="noopener noreferrer">{{project.name}} ↗</a>
+   }
+  </div>
+ </div>
+ <div class="border-t border-[--panel-border] pt-6">
+  <h2 class="font-mono-vt text-3xl text-[--accent] mb-4">{{languageService.language()==='es'?'En qué puedo ayudar':'How I can help'}}</h2>
   <div class="space-y-5">
    @for(offer of serviceCopy().offers;track $index){
     <section><h3 class="font-mono-vt text-2xl text-[--accent]">{{offer.title}}</h3><p class="text-sm text-gray-600 dark:text-gray-400 mt-2">{{offer.text}}</p></section>
