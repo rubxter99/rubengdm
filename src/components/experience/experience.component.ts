@@ -30,6 +30,6 @@ export class ExperienceComponent {
 
   jobs = computed<Job[]>(() => {
     const t = this.languageService.translations().experience.jobs;
-    return [t.niji, t.abacus, t.agama, t.tecoen];
+    return [t.niji, t.cyclops, t.abacus, t.agama, t.tecoen];
   });
 }

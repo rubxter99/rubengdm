@@ -33,6 +33,7 @@ const translations = {
       functions: 'FUNCIONES',
       jobs: {
         niji: {"role":"Desarrollador Full Stack","company":"Niji","period":"MARZO 2026 - ACTUALIDAD","type":"Contrato indefinido · Remoto","location":"Madrid, España","technologies":["Angular","TypeScript","Node.js","PHP","Laravel","Docker","GitLab CI/CD","APIs REST","Postman","Jira","Confluence"],"functions":["Desarrollo y mantenimiento de aplicaciones con Angular, Node.js, TypeScript, PHP y Laravel.","Actualización progresiva de Angular y Node.js y adaptación de dependencias y código legacy.","Refactorización de PHP/Laravel y desarrollo y validación de APIs REST.","Gestión de entornos Docker, pipelines GitLab y documentación técnica."]},
+        cyclops: {"role":"Colaborador de desarrollo web y videojuegos","company":"Cyclops Games","period":"2026 - ACTUALIDAD","type":"Proyecto independiente · Remoto","location":"Madrid, España","technologies":["TypeScript","Next.js","React","Vercel","GitHub","Discord"],"functions":["Mantenimiento y desarrollo continuo de la web de Cyclops Games tras su transferencia.","Implementación de contenido bilingüe, enlaces sociales, mejoras responsive y de accesibilidad, y configuración de despliegue con Vercel.","Participación en SKROLL junto al equipo de Cyclops Games.","Desarrollo de herramientas TypeScript para la comunidad de Discord, incluyendo verificación y moderación."]},
         abacus: {
           role: 'Desarrollador Full Stack',
           company: 'Abacus Consulting',
@@ -155,6 +156,7 @@ const translations = {
       functions: 'FUNCTIONS',
       jobs: {
         niji: {"role":"Full Stack Developer","company":"Niji","period":"MARCH 2026 - PRESENT","type":"Permanent contract · Remote","location":"Madrid, Spain","technologies":["Angular","TypeScript","Node.js","PHP","Laravel","Docker","GitLab CI/CD","REST APIs","Postman","Jira","Confluence"],"functions":["Developing and maintaining applications with Angular, Node.js, TypeScript, PHP and Laravel.","Upgrading Angular and Node.js and adapting dependencies and legacy code.","Refactoring PHP/Laravel code and developing and testing REST APIs.","Managing Docker environments, GitLab pipelines and technical documentation."]},
+        cyclops: {"role":"Web & Game Development Contributor","company":"Cyclops Games","period":"2026 - PRESENT","type":"Independent project · Remote","location":"Madrid, Spain","technologies":["TypeScript","Next.js","React","Vercel","GitHub","Discord"],"functions":["Maintain and continue developing the Cyclops Games website after its transfer.","Implemented bilingual content, social links, responsive and accessibility improvements, and Vercel deployment configuration.","Contribute to SKROLL alongside the Cyclops Games team.","Develop TypeScript tooling for the Discord community, including verification and moderation features."]},
         abacus: {
           role: 'Full Stack Developer',
           company: 'Abacus Consulting',

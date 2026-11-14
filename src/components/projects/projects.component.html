@@ -6,6 +6,11 @@
   <p class="font-mono-vt text-xl">{{languageService.language()==='es'?'En desarrollo · Proyecto de equipo':'In development · Team project'}}</p>
   <p class="text-sm text-gray-600 dark:text-gray-400">{{languageService.language()==='es'?'Participo en SKROLL con el equipo de Cyclops Games: un roguelike de gestión sobre el scroll infinito. El desarrollo de videojuegos es una parte de mi actividad creativa junto a la programación web.':'I contribute to SKROLL with the Cyclops Games team: a management roguelike about infinite scrolling. Game development is part of my creative work alongside web programming.'}}</p>
   <div class="flex flex-wrap gap-4 text-sm underline"><a href="https://cyclops-games.com/" target="_blank" rel="noopener noreferrer">Cyclops Games ↗</a><a href="https://store.steampowered.com/app/4224290/SKROLL/" target="_blank" rel="noopener noreferrer">Steam ↗</a></div>
+  <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
+   <li>{{languageService.language()==='es'?'Lanzamiento previsto en 2027':'Planned release in 2027'}}</li>
+   <li>{{languageService.language()==='es'?'200K+ visualizaciones del trailer y 5K+ descargas de la demo':'200K+ trailer views and 5K+ demo downloads'}}</li>
+   <li>{{languageService.language()==='es'?'Ganador del Social Impact Award y nominado a Best Visual Art en Guerrilla Game Festival 2026':'Social Impact Award winner and Best Visual Art nominee at Guerrilla Game Festival 2026'}}</li>
+  </ul>
  </article>
  <div class="games-grid gap-6">
  @for(game of videogames();track game.title){
