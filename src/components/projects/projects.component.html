@@ -20,4 +20,16 @@
   </a>
  }
  </div>
+ <section class="space-y-4 pt-2">
+  <h4 class="font-mono-vt text-2xl text-[--accent]">{{languageService.language()==='es'?'TRABAJO CREATIVO':'CREATIVE WORK'}}</h4>
+  <p class="text-sm text-gray-600 dark:text-gray-400">{{languageService.language()==='es'?'Una seleccion de ilustracion, arte de videojuego y modelado 3D propio.':'A selection of my own illustration, game art and 3D modelling work.'}}</p>
+  <div class="games-grid gap-6">
+   @for(work of creativeWork(); track work.imageUrl) {
+    <figure class="border border-[--panel-border] bg-[--bg-panel] p-4 rounded-md">
+     <img [src]="work.imageUrl" [alt]="work.title" loading="lazy" class="aspect-video w-full object-cover rounded mb-3">
+     <figcaption><h5 class="font-bold text-[--accent]">{{work.title}}</h5><p class="text-sm text-gray-600 dark:text-gray-400">{{work.category}}</p></figcaption>
+    </figure>
+   }
+  </div>
+ </section>
 </div>
