@@ -1,0 +1,30 @@
+<main class="desktop-shell">
+ <div class="desktop-controls"><app-language-toggle/><app-theme-toggle/></div>
+ @if (!isMobile()) {
+  <div class="desktop-area">
+   @for(win of windows();track win.id){
+    @if(win.isOpen){
+     <app-window [attr.data-window]="win.id" [title]="win.title" [initialSize]="win.size" [initialPosition]="win.position" [zIndex]="win.zIndex" [isMaximized]="win.isMaximized ?? false" [isClosing]="win.isClosing ?? false"
+      (close)="desktopService.closeWindow(win.id)" (focus)="desktopService.focusWindow(win.id)" (toggleMaximize)="desktopService.toggleMaximize(win.id)" (sizeChange)="desktopService.updateWindowSize(win.id,$event)" (positionChange)="desktopService.updateWindowPosition(win.id,$event)">
+      <ng-container [ngComponentOutlet]="getComponentType(win.componentName)"/>
+     </app-window>
+    }
+   }
+  </div>
+ } @else {
+  <div class="mobile-desktop">
+   @for(win of windows();track win.id){
+    @if(win.isOpen){
+     <section [id]="win.id" [attr.data-window]="win.id" class="mobile-window">
+      <div class="mobile-titlebar"><button (click)="desktopService.closeWindow(win.id)" [attr.aria-label]="(language.language()==='es'?'Cerrar ':'Close ')+win.title" class="mobile-close"></button><h2 class="font-mono-vt text-lg">{{win.title}}</h2></div>
+      <div class="p-4"><ng-container [ngComponentOutlet]="getComponentType(win.componentName)"/></div>
+     </section>
+    }
+   }
+  </div>
+ }
+ @if(!desktopService.hasOpenWindows()){
+  <div class="empty-desktop"><p class="font-mono-vt text-2xl">Rubén García</p><button (click)="desktopService.toggleWindow('about')" class="font-mono-vt text-xl underline">{{language.language()==='es'?'Abrir Sobre mí':'Open About me'}}</button></div>
+ }
+ <app-dock/>
+</main>

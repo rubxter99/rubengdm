@@ -1,0 +1,21 @@
+<div class="contact-content space-y-8">
+ <div class="text-center space-y-4">
+  <a href="mailto:ruben.garciadm@gmail.com" class="cv-link font-mono-vt text-2xl"><app-typewriter [text]="contactButtonText()"/></a>
+  <p><a href="mailto:ruben.garciadm@gmail.com">ruben.garciadm&#64;gmail.com</a></p>
+  <p class="text-gray-500 font-mono-vt text-lg">Madrid, {{languageService.language()==='es'?'España':'Spain'}}</p>
+  <div class="flex items-center justify-center gap-6">
+   @for(social of socialLinks();track social.name){
+    <a [href]="social.url" target="_blank" rel="noopener noreferrer" [attr.aria-label]="social.name"><svg class="h-6 w-6" fill="currentColor" [attr.viewBox]="social.viewBox||'0 0 24 24'"><path [attr.d]="social.path"/></svg></a>
+   }
+  </div>
+ </div>
+ <div class="border-t border-[--panel-border] pt-6">
+  <h2 class="font-mono-vt text-3xl text-[--accent] mb-4">{{languageService.language()==='es'?'Servicios web':'Web services'}}</h2>
+  <div class="space-y-5">
+   @for(offer of serviceCopy().offers;track $index){
+    <section><h3 class="font-mono-vt text-2xl text-[--accent]">{{offer.title}}</h3><p class="text-sm text-gray-600 dark:text-gray-400 mt-2">{{offer.text}}</p></section>
+   }
+  </div>
+  <p class="text-sm text-gray-600 dark:text-gray-400 mt-6">{{serviceCopy().serviceIntro}}</p>
+ </div>
+</div>

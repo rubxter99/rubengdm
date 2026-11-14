@@ -1,0 +1,9 @@
+<div class="about-content">
+ <img [ngSrc]="profileImageUrl()" width="128" height="128" priority alt="Rubén García" class="about-photo">
+ <h1 class="font-mono-vt text-4xl text-[--accent] mb-3"><app-typewriter [text]="name()"/></h1>
+ <h2 class="text-xl text-gray-600 dark:text-gray-400 mb-6"><app-typewriter [text]="title()"/></h2>
+ <div class="space-y-4 text-zinc-800 dark:text-gray-400">
+ @for(paragraph of descriptionParagraphs();track $index){<p>{{paragraph}}</p>}
+ </div>
+ <a class="cv-link font-mono-vt text-xl" [href]="'cv/CV_RubenGarcia_'+languageService.language().toUpperCase()+'.pdf'" download>{{languageService.language()==='es'?'Descargar CV':'Download CV'}} · {{languageService.language().toUpperCase()}} ↓</a>
+</div>

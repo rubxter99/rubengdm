@@ -1,0 +1,33 @@
+
+<div class="h-full flex flex-col">
+  <div class="space-y-8 overflow-y-auto pr-2 flex-grow">
+    @for(job of jobs(); track job.company) {
+      <div>
+        <h2 class="text-xl font-bold text-[--accent] min-h-7 flex items-center">
+          <app-typewriter [text]="job.role + ' - ' + job.company"></app-typewriter>
+        </h2>
+        <p class="text-sm font-mono-vt text-gray-500 mb-4">
+          {{ job.period }} ({{ job.type }}) {{ job.location }}
+        </p>
+
+        <div>
+          <h3 class="font-bold text-gray-400 text-sm mb-2">{{ technologiesLabel() }}</h3>
+          <div class="flex flex-wrap gap-2 mb-4">
+            @for(tech of job.technologies; track tech) {
+              <span class="bg-[--skill-bg] text-[--skill-text] text-xs px-2 py-0.5 rounded-md border border-[--skill-border]">{{ tech }}</span>
+            }
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-gray-400 text-sm mb-2">{{ functionsLabel() }}</h3>
+          <ul class="list-disc list-inside space-y-1 text-gray-400 text-sm">
+            @for(func of job.functions; track func) {
+              <li>{{ func }}</li>
+            }
+          </ul>
+        </div>
+      </div>
+    }
+  </div>
+</div>

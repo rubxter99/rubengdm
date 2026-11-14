@@ -1,0 +1,20 @@
+
+<div class="skill-grid gap-x-8 gap-y-12">
+  @for(category of skillCategories(); track category.name) {
+    <div class="flex items-start gap-4">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[--accent] flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+      </svg>
+      <div class="min-w-0">
+        <h3 class="font-mono-vt text-2xl text-[--accent] mb-2 min-h-8 flex items-center">
+          <app-typewriter [text]="category.name"></app-typewriter>
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          @for(skill of category.skills; track skill) {
+            <span class="bg-[--skill-bg] text-[--skill-text] text-sm px-2 py-1 rounded-md border border-[--skill-border]">{{ skill }}</span>
+          }
+        </div>
+      </div>
+    </div>
+  }
+</div>
